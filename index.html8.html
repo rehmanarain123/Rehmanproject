@@ -1,0 +1,64 @@
+import React from "react";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-cover bg-center flex flex-col items-center justify-center relative" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80')` }}>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-md z-0"></div>
+
+      {/* Navigation */}
+      <nav className="w-full max-w-5xl px-6 py-4 flex justify-between items-center relative z-10 text-white">
+        <div className="text-2xl font-bold">🌲</div>
+        <ul className="flex space-x-6 font-medium">
+          <li><a href="#" className="hover:underline">Home</a></li>
+          <li><a href="#" className="hover:underline">Service</a></li>
+          <li><a href="#" className="hover:underline">Contact</a></li>
+          <li><a href="#" className="hover:underline">About</a></li>
+        </ul>
+        <div>
+          <input
+            type="text"
+            placeholder="Search"
+            className="px-4 py-1 rounded-full text-sm text-black"
+          />
+        </div>
+      </nav>
+
+      {/* Sign Up Form */}
+      <div className="z-10 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-10 py-8 text-white shadow-xl w-full max-w-md relative mt-12">
+        <h2 className="text-2xl font-bold mb-2 text-center">Sign Up</h2>
+        <p className="text-sm text-center mb-6 text-white/70">
+          Already a member? <span className="underline">Log In</span>
+        </p>
+
+        <form className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full px-4 py-2 rounded bg-white/20 placeholder-white/70 text-white focus:outline-none"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full px-4 py-2 rounded bg-white/20 placeholder-white/70 text-white focus:outline-none"
+          />
+          <button className="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded font-semibold">
+            Sign Up
+          </button>
+        </form>
+
+        <div className="my-4 text-center text-sm text-white/70">or sign up with</div>
+        <div className="flex justify-center gap-4">
+          <button className="bg-white/20 p-2 rounded-full hover:bg-blue-500 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" className="w-5 h-5" alt="Facebook" />
+          </button>
+          <button className="bg-white/20 p-2 rounded-full hover:bg-red-500 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" className="w-5 h-5" alt="Google" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
